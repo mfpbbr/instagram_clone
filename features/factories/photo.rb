@@ -1,7 +1,9 @@
+require 'factory_girl_rails'
+
 FactoryGirl.define do
   
-  factory :create_photo do
-    URL "app/assets/images/Unknown.jpg"
+  factory :photo do
+    image { Rails.root.join("public/images/unknown.jpg").open }
     caption "Awesome"
     tags "selfie yolo"
   end

@@ -8,6 +8,8 @@
     - if user_signed_in?
       %li
         = link_to('Logout', destroy_user_session_path, :method => :delete)
+      %li
+        = link_to('Add Photo', new_photo_path, class: "add_photo" )
     - else
       %li
         = link_to('Login', new_user_session_path)
@@ -18,7 +20,23 @@
       %li
         = link_to('Register', new_user_registration_path)
 
-    = link_to('Add Photo', new_photo_path)
+    %div{class: "add_photo_form"}
+      = form_for Photo.new, :html => { :multipart => true } do |f|
+        %p
+          = f.label :image
+          %br/
+          = f.file_field :image        
+        %p
+          = f.label :caption
+          %br/
+          = f.text_field :caption
+        %p
+          = f.label :tags
+          %br/
+          = f.text_area :tags
+        %p
+          = f.submit 'Upload'
+
 
     %p.notice= notice
     %p.alert= alert

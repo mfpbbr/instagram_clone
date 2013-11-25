@@ -21,11 +21,23 @@ Then(/^I should see a photo on the homepage$/) do
 end
 
 Given(/^I have uplodaed a photo with caption "(.*?)" and tags "(.*?)"$/) do |caption, tags|
-  
+  FactoryGirl.create(:photo)
+  visit '/photos'
+  current_path = URI.parse(current_url).path
+  current_path.should == '/photos'
+  page.should have_content 'Edit'
 end
 
 When(/^I edit the caption to "(.*?)"$/) do |caption|
   click_link 'Edit'
   fill_in 'Caption', with: caption
-  click_link 'Update'
+  click_button 'Update'
+end
+
+When(/^I delete the photo$/) do
+  click_link 'Delete'
+end
+
+Then(/^I should not see "(.*?)"$/) do |caption|
+	page.should_not have_content caption
 end

@@ -16,3 +16,8 @@ Feature: Photos
     When I edit the caption to "Salami"
     Then I should see "Salami"
 
+  Scenario: Delete photo
+    Given I have uplodaed a photo with caption "Awesome" and tags "selfie yolo"
+    When I delete the photo
+    Then I should not see "Awesome"
+

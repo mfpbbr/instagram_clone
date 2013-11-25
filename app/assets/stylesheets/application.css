@@ -11,3 +11,7 @@
  *= require_self
  *= require_tree .
  */
+
+.add_photo_form {
+	display: none;
+}
