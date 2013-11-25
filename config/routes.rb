@@ -5,6 +5,8 @@ InstagramClone::Application.routes.draw do
 
   root :to => "home#index"
 
+  resources :photos
+
   # You can have the root of your site routed with "root"
   # root 'welcome#index'
 

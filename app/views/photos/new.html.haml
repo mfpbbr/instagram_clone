@@ -1,0 +1,15 @@
+= form_for @photo do |f|
+  %p
+    = f.label :URL
+    %br/
+    = f.text_field :URL        
+  %p
+    = f.label :caption
+    %br/
+    = f.text_field :caption
+  %p
+    = f.label :tags
+    %br/
+    = f.text_area :tags
+  %p
+    = f.submit 'Upload'

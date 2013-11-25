@@ -1,0 +1,5 @@
+- @photos.each do |photo|
+  %img{src: photo.URL, class:"instagram_image" }
+  = photo.caption
+  = photo.tags
+
