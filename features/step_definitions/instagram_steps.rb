@@ -20,3 +20,12 @@ Then(/^I should see a photo on the homepage$/) do
 	page.should have_css(".instagram_image")
 end
 
+Given(/^I have uplodaed a photo with caption "(.*?)" and tags "(.*?)"$/) do |caption, tags|
+  
+end
+
+When(/^I edit the caption to "(.*?)"$/) do |caption|
+  click_link 'Edit'
+  fill_in 'Caption', with: caption
+  click_link 'Update'
+end

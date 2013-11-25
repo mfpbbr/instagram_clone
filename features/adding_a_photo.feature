@@ -12,8 +12,7 @@ Feature: Photos
 		Then I should see a photo on the homepage
 	
   Scenario: Edit photo
-    When I click "Edit" on my "My little dick"
-    And I change the caption to "My big dick"
-    Then I should see "My big dick"
+    Given I have uplodaed a photo with caption "Awesome" and tags "selfie yolo"
+    When I edit the caption to "Salami"
+    Then I should see "Salami"
 
-    
