@@ -1,12 +1,14 @@
-- @photos.each do |photo|
-  %img{ src: photo.image.url, class:"instagram_image" }
-  %br
-  = photo.caption
-  %br
-  = photo.tags
-  %br
-  = link_to 'Edit', edit_photo_path(photo)
-  %br
-  = link_to 'Delete', photo_path(photo),
-                    method: :delete, data: { confirm: 'Are you sure?' }
-  %br
+%body
+  - @photos.each do |photo|
+    %section{class:"insta_image"}
+      %img{ src: photo.image.url, class:"instagram_image" }
+      %br
+      = photo.caption
+      %br
+      = photo.tags
+      %br
+      = link_to 'Edit', edit_photo_path(photo)
+      %br
+      = link_to 'Delete', photo_path(photo),
+                        method: :delete, data: { confirm: 'Are you sure?' }
+      %br

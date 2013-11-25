@@ -15,3 +15,12 @@
 .add_photo_form {
 	display: none;
 }
+
+.logout_link {
+	float:right;
+}
+
+.edit_registration {
+	float:right; 
+}
+

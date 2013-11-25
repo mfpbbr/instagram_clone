@@ -6,15 +6,15 @@
     = csrf_meta_tags
   %body
     - if user_signed_in?
-      %li
+      %li{class:"logout_link"}
         = link_to('Logout', destroy_user_session_path, :method => :delete)
-      %li
+      %li{class:"add_photo_link"}
         = link_to('Add Photo', new_photo_path, class: "add_photo" )
     - else
       %li
         = link_to('Login', new_user_session_path)
     - if user_signed_in?
-      %li
+      %li{class:"edit_registration"}
         = link_to('Edit registration', edit_user_registration_path)
     - else
       %li
