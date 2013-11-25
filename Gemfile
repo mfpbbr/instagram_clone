@@ -8,6 +8,7 @@ gem 'sqlite3'
 
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 4.0.0'
+gem 'haml'
 
 # Use Uglifier as compressor for JavaScript assets
 gem 'uglifier', '>= 1.3.0'
@@ -26,10 +27,20 @@ gem 'turbolinks'
 
 # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
 gem 'jbuilder', '~> 1.2'
+gem 'pg'
+gem 'devise'
+
 
 group :doc do
-  # bundle exec rake doc:rails generates the API under doc/api.
   gem 'sdoc', require: false
+  gem 'capybara'
+	gem 'rspec-rails'
+	gem 'cucumber-rails', :require => false
+	gem 'database_cleaner'
+	gem 'shoulda-matchers'
+	gem 'poltergeist'
+	gem 'simplecov', :require => false, :group => :test
+  gem 'factory_girl_rails'
 end
 
 # Use ActiveModel has_secure_password
