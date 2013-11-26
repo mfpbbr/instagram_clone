@@ -12,6 +12,9 @@ class PhotosController < ApplicationController
 
 	def create
 		@photo = current_user.photos.build(photo_params)
+		@photo.tags = params[:photo][:tag_list].split(' ').map do |text|
+  		Tag.create(text: text)
+  	end
 		if @photo.save
 			redirect_to '/photos'
 		else
@@ -39,7 +42,7 @@ class PhotosController < ApplicationController
 
 	private
 		def photo_params
-			params[:photo].permit(:image, :caption, :tags)
+			params[:photo].permit(:image, :caption)
 		end
 
 		def find_photo

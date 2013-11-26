@@ -7,7 +7,9 @@ class Photo < ActiveRecord::Base
   validates :user, presence: true
   validates :image, attachment_presence: { message: 'need a photo' }
 
+  def tag_list
+  	tags.map(&:text).join ' '
+  end
+
   # validates :tags, format: { with: /\A(\#(\w)*(\W)?)*\z/, message: "has to have a Hashtag (/#)" }
 end
-
-
