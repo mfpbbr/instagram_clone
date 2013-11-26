@@ -1,14 +1,14 @@
 {
   "Cucumber Features": {
     "coverage": {
-      "/Users/jacko_nufc/Desktop/Makers/dev/instagram_clone/config/environment.rb": [
+      "/Users/Hami/Documents/Ruby/instagram_clone/config/environment.rb": [
         null,
         1,
         null,
         null,
         1
       ],
-      "/Users/jacko_nufc/Desktop/Makers/dev/instagram_clone/config/application.rb": [
+      "/Users/Hami/Documents/Ruby/instagram_clone/config/application.rb": [
         1,
         null,
         1,
@@ -33,13 +33,13 @@
         null,
         null
       ],
-      "/Users/jacko_nufc/Desktop/Makers/dev/instagram_clone/config/boot.rb": [
+      "/Users/Hami/Documents/Ruby/instagram_clone/config/boot.rb": [
         null,
         1,
         null,
         1
       ],
-      "/Users/jacko_nufc/Desktop/Makers/dev/instagram_clone/config/environments/test.rb": [
+      "/Users/Hami/Documents/Ruby/instagram_clone/config/environments/test.rb": [
         1,
         null,
         null,
@@ -77,7 +77,7 @@
         1,
         null
       ],
-      "/Users/jacko_nufc/Desktop/Makers/dev/instagram_clone/config/initializers/backtrace_silencers.rb": [
+      "/Users/Hami/Documents/Ruby/instagram_clone/config/initializers/backtrace_silencers.rb": [
         null,
         null,
         null,
@@ -86,7 +86,7 @@
         null,
         null
       ],
-      "/Users/jacko_nufc/Desktop/Makers/dev/instagram_clone/config/initializers/devise.rb": [
+      "/Users/Hami/Documents/Ruby/instagram_clone/config/initializers/devise.rb": [
         null,
         null,
         1,
@@ -342,13 +342,13 @@
         null,
         null
       ],
-      "/Users/jacko_nufc/Desktop/Makers/dev/instagram_clone/config/initializers/filter_parameter_logging.rb": [
+      "/Users/Hami/Documents/Ruby/instagram_clone/config/initializers/filter_parameter_logging.rb": [
         null,
         null,
         null,
         1
       ],
-      "/Users/jacko_nufc/Desktop/Makers/dev/instagram_clone/config/initializers/inflections.rb": [
+      "/Users/Hami/Documents/Ruby/instagram_clone/config/initializers/inflections.rb": [
         null,
         null,
         null,
@@ -366,14 +366,14 @@
         null,
         null
       ],
-      "/Users/jacko_nufc/Desktop/Makers/dev/instagram_clone/config/initializers/mime_types.rb": [
+      "/Users/Hami/Documents/Ruby/instagram_clone/config/initializers/mime_types.rb": [
         null,
         null,
         null,
         null,
         null
       ],
-      "/Users/jacko_nufc/Desktop/Makers/dev/instagram_clone/config/initializers/secret_token.rb": [
+      "/Users/Hami/Documents/Ruby/instagram_clone/config/initializers/secret_token.rb": [
         null,
         null,
         null,
@@ -387,12 +387,12 @@
         null,
         1
       ],
-      "/Users/jacko_nufc/Desktop/Makers/dev/instagram_clone/config/initializers/session_store.rb": [
+      "/Users/Hami/Documents/Ruby/instagram_clone/config/initializers/session_store.rb": [
         null,
         null,
         1
       ],
-      "/Users/jacko_nufc/Desktop/Makers/dev/instagram_clone/config/initializers/wrap_parameters.rb": [
+      "/Users/Hami/Documents/Ruby/instagram_clone/config/initializers/wrap_parameters.rb": [
         null,
         null,
         null,
@@ -408,7 +408,7 @@
         null,
         null
       ],
-      "/Users/jacko_nufc/Desktop/Makers/dev/instagram_clone/config/routes.rb": [
+      "/Users/Hami/Documents/Ruby/instagram_clone/config/routes.rb": [
         1,
         1,
         null,
@@ -473,7 +473,7 @@
         null,
         null
       ],
-      "/Users/jacko_nufc/Desktop/Makers/dev/instagram_clone/app/models/user.rb": [
+      "/Users/Hami/Documents/Ruby/instagram_clone/app/models/user.rb": [
         1,
         null,
         null,
@@ -482,7 +482,7 @@
         null,
         null
       ],
-      "/Users/jacko_nufc/Desktop/Makers/dev/instagram_clone/features/factories/photo.rb": [
+      "/Users/Hami/Documents/Ruby/instagram_clone/features/factories/photo.rb": [
         1,
         null,
         1,
@@ -501,7 +501,7 @@
         null,
         null
       ],
-      "/Users/jacko_nufc/Desktop/Makers/dev/instagram_clone/features/factories/user.rb": [
+      "/Users/Hami/Documents/Ruby/instagram_clone/features/factories/user.rb": [
         1,
         null,
         1,
@@ -514,7 +514,7 @@
         null,
         null
       ],
-      "/Users/jacko_nufc/Desktop/Makers/dev/instagram_clone/features/step_definitions/instagram_steps.rb": [
+      "/Users/Hami/Documents/Ruby/instagram_clone/features/step_definitions/instagram_steps.rb": [
         1,
         1,
         null,
@@ -580,7 +580,7 @@
         null,
         null
       ],
-      "/Users/jacko_nufc/Desktop/Makers/dev/instagram_clone/app/controllers/home_controller.rb": [
+      "/Users/Hami/Documents/Ruby/instagram_clone/app/controllers/home_controller.rb": [
         1,
         null,
         1,
@@ -589,30 +589,30 @@
         null,
         null
       ],
-      "/Users/jacko_nufc/Desktop/Makers/dev/instagram_clone/app/controllers/application_controller.rb": [
+      "/Users/Hami/Documents/Ruby/instagram_clone/app/controllers/application_controller.rb": [
         1,
         null,
         null,
         1,
         null
       ],
-      "/Users/jacko_nufc/Desktop/Makers/dev/instagram_clone/app/helpers/application_helper.rb": [
+      "/Users/Hami/Documents/Ruby/instagram_clone/app/helpers/application_helper.rb": [
         1,
         null
       ],
-      "/Users/jacko_nufc/Desktop/Makers/dev/instagram_clone/app/helpers/home_helper.rb": [
+      "/Users/Hami/Documents/Ruby/instagram_clone/app/helpers/home_helper.rb": [
         1,
         null
       ],
-      "/Users/jacko_nufc/Desktop/Makers/dev/instagram_clone/app/helpers/photos_helper.rb": [
+      "/Users/Hami/Documents/Ruby/instagram_clone/app/helpers/photos_helper.rb": [
         1,
         null
       ],
-      "/Users/jacko_nufc/Desktop/Makers/dev/instagram_clone/app/helpers/tags_helper.rb": [
+      "/Users/Hami/Documents/Ruby/instagram_clone/app/helpers/tags_helper.rb": [
         1,
         null
       ],
-      "/Users/jacko_nufc/Desktop/Makers/dev/instagram_clone/app/models/photo.rb": [
+      "/Users/Hami/Documents/Ruby/instagram_clone/app/models/photo.rb": [
         1,
         1,
         null,
@@ -622,12 +622,23 @@
         1,
         1,
         null,
+        1,
+        12,
         null,
         null,
+        1,
+        null
+      ],
+      "/Users/Hami/Documents/Ruby/instagram_clone/app/models/tag.rb": [
+        1,
+        null,
+        1,
+        null,
+        1,
         null,
         null
       ],
-      "/Users/jacko_nufc/Desktop/Makers/dev/instagram_clone/app/controllers/photos_controller.rb": [
+      "/Users/Hami/Documents/Ruby/instagram_clone/app/controllers/photos_controller.rb": [
         1,
         1,
         1,
@@ -646,6 +657,9 @@
         0,
         null,
         0,
+        0,
+        null,
+        0,
         null,
         null,
         null,
@@ -676,15 +690,9 @@
         0,
         null,
         null,
-        null
-      ],
-      "/Users/jacko_nufc/Desktop/Makers/dev/instagram_clone/app/models/tag.rb": [
-        1,
-        null,
-        1,
         null
       ]
     },
-    "timestamp": 1385488444
+    "timestamp": 1385491881
   }
 }
