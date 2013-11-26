@@ -5,7 +5,9 @@
       %br
       = photo.caption
       %br
-      = photo.tags
+      = photo.tags.text.split(' ').each do |tag|
+        %a{href: '/'} 
+          = tag
       %br
       Uploaded by:
       = photo.user.email
