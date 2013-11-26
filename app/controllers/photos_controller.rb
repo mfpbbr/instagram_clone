@@ -1,5 +1,6 @@
 class PhotosController < ApplicationController
 	before_filter :find_photo, only: [:edit, :update, :destroy]
+	before_action :authenticate_user!, except: :index
 
 	def index
 		@photos = Photo.all
@@ -10,7 +11,7 @@ class PhotosController < ApplicationController
 	end
 
 	def create
-		@photo = Photo.new(photo_params)
+		@photo = current_user.photos.build(photo_params)
 		if @photo.save
 			redirect_to '/photos'
 		else

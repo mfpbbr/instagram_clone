@@ -29,7 +29,12 @@ gem 'turbolinks'
 gem 'jbuilder', '~> 1.2'
 gem 'pg'
 gem 'devise'
-gem "paperclip"
+gem 'paperclip'
+
+group :production do
+	gem 'aws-sdk'
+	gem 'rails_12factor'
+end
 
 group :doc do
   gem 'sdoc', require: false
@@ -41,6 +46,8 @@ group :doc do
 	gem 'poltergeist'
 	gem 'simplecov', :require => false, :group => :test
   gem 'factory_girl_rails'
+  gem 'launchy'
+  gem 'shoulda-matchers'
 end
 
 # Use ActiveModel has_secure_password

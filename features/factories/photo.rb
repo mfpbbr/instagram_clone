@@ -6,6 +6,7 @@ FactoryGirl.define do
     image { Rails.root.join("public/images/unknown.jpg").open }
     caption "Awesome"
     tags "selfie yolo"
+    user
   end
 
 end

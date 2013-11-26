@@ -4,20 +4,28 @@ Feature: Photos
 	I want to be able to show my photos to the world
 
 	Background: 
-		Given I am on the homepage
+	  Given I am on the homepage
 
+	@javascript
 	Scenario: Adding photos
-		When I click "Add Photo"
-    And I upload the photo
-		Then I should see a photo on the homepage
+	  Given I have logged in
+	  When I click "Add Photo"
+      Then I upload a photo
+	  Then I should see a photo on the homepage
 	
-  Scenario: Edit photo
-    Given I have uplodaed a photo with caption "Awesome" and tags "selfie yolo"
-    When I edit the caption to "Salami"
-    Then I should see "Salami"
+	Scenario: Edit photo
+	  Given I have logged in
+	  And I have uploaded a photo with caption "Awesome" and tags "selfie yolo"
+	  When I edit the photo and fill in "Caption" with "Salami" within ".edit_caption"
+	  Then I should see "Salami"
 
-  Scenario: Delete photo
-    Given I have uplodaed a photo with caption "Awesome" and tags "selfie yolo"
-    When I delete the photo
-    Then I should not see "Awesome"
+	Scenario: Delete photo
+	  Given I have uploaded a photo with caption "Awesome" and tags "selfie yolo"
+	  When I delete the photo
+	  Then I should not see "Awesome"
+
+	Scenario: Showing the user who posted the photo
+	  Given I have logged in
+	  And I have uploaded a photo with caption "Awesome" and tags "selfie yolo"
+	  Then I should see "james@me.com"
 
