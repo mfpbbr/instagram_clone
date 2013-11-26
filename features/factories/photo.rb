@@ -4,8 +4,13 @@ FactoryGirl.define do
   
   factory :photo do
     image { Rails.root.join("public/images/unknown.jpg").open }
-    caption "Awesome"
-    tags "selfie yolo"
+    user
+  end
+
+  factory :photo2 do
+    image { Rails.root.join("public/images/unknown.jpg").open }
+    caption "Blue Jeans"
+    tags "#cheap #nasty"
     user
   end
 

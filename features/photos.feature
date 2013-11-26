@@ -29,3 +29,8 @@ Feature: Photos
 	  And I have uploaded a photo with caption "Awesome" and tags "selfie yolo"
 	  Then I should see "james@me.com"
 
+	Scenario: Harshtags
+		Given I have uploaded a photo with caption "Blue Jeans" and tags "#cheap #nasty"
+		Then I should see "#cheap #nasty"
+
+
