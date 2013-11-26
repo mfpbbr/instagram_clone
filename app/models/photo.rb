@@ -6,5 +6,3 @@ class Photo < ActiveRecord::Base
 end
 
 
-# AKIAIBILV4OZ3SMFCFXQ
-# X7WpNVGvU24/ezA86Be7txdRb/Oad9MOyzuU6L4H
