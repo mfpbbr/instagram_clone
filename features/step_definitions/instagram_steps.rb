@@ -37,13 +37,6 @@ Given(/^I have uploaded a photo with caption "(.*?)" and tags "(.*?)"$/) do |cap
   visit '/photos'
 end
 
-When(/^I edit the caption to "(.*?)"$/) do |caption|
-  page.should have_content 'Edit'
-  click_link 'Edit'
-  fill_in 'Caption', with: caption
-  click_button 'Update'
-end
-
 When /^(?:|I )edit the photo and fill in "([^\"]*)" with "([^\"]*)"(?: within "([^\"]*)")?$/ do |field, value, selector|
   click_link 'Edit'
   with_scope(selector) do
@@ -63,5 +56,13 @@ end
 Given(/^I have logged in$/) do
   login_as FactoryGirl.create(:user)
   visit('/')
+end
+
+When(/^I like the photo with caption "(.*?)"$/) do |caption|
+  click_button 'Like'
+end
+
+Then(/^the photo has one like$/) do
+  page.should have_content "Likes: 1"
 end
 

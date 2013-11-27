@@ -1,0 +1,7 @@
+- like = current_user.like(photo)
+- if like
+  = form_for [photo, like], :html => { :method => :delete } do |f|
+    = f.submit "Unlike"
+- else
+  = button_to 'Like', photo_likes_path(photo)
+  

@@ -1,4 +1,5 @@
 InstagramClone::Application.routes.draw do
+
   resources :tags
 
   devise_for :users
@@ -7,7 +8,9 @@ InstagramClone::Application.routes.draw do
 
   root :to => "photos#index"
 
-  resources :photos
+  resources :photos do 
+    resources :likes
+  end
 
   # You can have the root of your site routed with "root"
   # root 'welcome#index'

@@ -3,6 +3,7 @@ class Photo < ActiveRecord::Base
   
   belongs_to :user
   has_and_belongs_to_many :tags
+  has_many :likes
 
   validates :user, presence: true
   validates :image, attachment_presence: { message: 'need a photo' }
