@@ -28,6 +28,10 @@ gem 'pg'
 gem 'devise'
 gem 'paperclip'
 
+gem  'twitter-bootstrap-rails', 
+							github: 'seyhunak/twitter-bootstrap-rails',
+							branch: 'bootstrap3'
+
 group :production do
 	gem 'aws-sdk'
 	gem 'rails_12factor'

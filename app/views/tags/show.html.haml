@@ -1,0 +1,17 @@
+- @photos.each do |photo|
+  %section{class:"insta_image"}
+    = image_tag photo.image.url(:medium), class: "instagram_image"
+    %br
+    = photo.caption
+    %br
+    - photo.tags.each do |tag|
+      =link_to tag.text,tag
+    %br
+    Uploaded by:
+    = photo.user.email
+    %br
+    = link_to 'Edit', edit_photo_path(photo)
+    %br
+    = link_to 'Delete', photo_path(photo),
+                        method: :delete, data: { confirm: 'Are you sure?' }
+    %br

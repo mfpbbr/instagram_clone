@@ -30,7 +30,10 @@ Then(/^I should see a photo on the homepage$/) do
 end
 
 Given(/^I have uploaded a photo with caption "(.*?)" and tags "(.*?)"$/) do |caption, tags|
-  FactoryGirl.create(:photo, caption: caption, tags: tags, user: FactoryGirl.create(:user, email: "james@me.com"))
+  tag_array = tags.split(' ').map do |tag_text|
+    FactoryGirl.create(:tag, text: tag_text)
+  end
+  FactoryGirl.create(:photo, caption: caption, tags: tag_array, user: FactoryGirl.create(:user, email: "james@me.com"))
   visit '/photos'
 end
 

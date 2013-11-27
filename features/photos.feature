@@ -15,18 +15,18 @@ Feature: Photos
 	
 	Scenario: Edit photo
 	  Given I have logged in
-	  And I have uploaded a photo with caption "Awesome" and tags "selfie yolo"
+	  And I have uploaded a photo with caption "Awesome" and tags "#selfie #yolo"
 	  When I edit the photo and fill in "Caption" with "Salami" within ".edit_caption"
 	  Then I should see "Salami"
 
 	Scenario: Delete photo
-	  Given I have uploaded a photo with caption "Awesome" and tags "selfie yolo"
+	  Given I have uploaded a photo with caption "Awesome" and tags "#selfie #yolo"
 	  When I delete the photo
 	  Then I should not see "Awesome"
 
 	Scenario: Showing the user who posted the photo
 	  Given I have logged in
-	  And I have uploaded a photo with caption "Awesome" and tags "selfie yolo"
+	  And I have uploaded a photo with caption "Awesome" and tags "#selfie #yolo"
 	  Then I should see "james@me.com"
 
 	Scenario: Harshtags

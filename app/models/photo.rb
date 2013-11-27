@@ -11,5 +11,4 @@ class Photo < ActiveRecord::Base
   	tags.map(&:text).join ' '
   end
 
-  validates :tag_list, format: { with: /\A(\#(\w)*(\W)?)*\z/, message: "has to have a Hashtag (/#)" }
 end

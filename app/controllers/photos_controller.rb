@@ -13,7 +13,7 @@ class PhotosController < ApplicationController
 	def create
 		@photo = current_user.photos.build(photo_params)
 		@photo.tags = params[:photo][:tag_list].split(' ').map do |text|
-  		Tag.create(text: text)
+  		Tag.find_or_create_by(text: text)
   	end
 		if @photo.save
 			redirect_to '/photos'

@@ -1,7 +1,7 @@
 %body
   - @photos.each do |photo|
     %section{class:"insta_image"}
-      %img{ src: photo.image.url, class:"instagram_image" }
+      = image_tag photo.image.url(:medium), class: "instagram_image"
       %br
       = photo.caption
       %br

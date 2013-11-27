@@ -14,6 +14,15 @@
 
 .add_photo_form {
 	display: none;
+	margin-left: auto;
+	margin-right: auto;
+	vertical-align: center;
+}
+
+.add_photo_form #photo_image {
+	margin-left: auto;
+	margin-right: auto;
+	vertical-align: 
 }
 
 .logout_link {
