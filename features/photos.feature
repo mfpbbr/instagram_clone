@@ -34,7 +34,7 @@ Feature: Photos
 		Then I should see "#cheap #nasty"
 
 	Scenario: Likes
-		Given I have uploaded a photo with caption "Awesome" and tags "#selfie #yolo"
+		Given I have uploaded a photo with caption "Awesome"and tags "#selfie #yolo"
 		When I like the photo with caption "Awesome"
 		Then the photo has one like
 

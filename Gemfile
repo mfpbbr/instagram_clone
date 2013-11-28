@@ -31,6 +31,8 @@ gem 'paperclip'
 gem  'twitter-bootstrap-rails', 
 							github: 'seyhunak/twitter-bootstrap-rails',
 							branch: 'bootstrap3'
+gem 'websocket-rails'
+gem 'thin'
 
 group :production do
 	gem 'aws-sdk'
