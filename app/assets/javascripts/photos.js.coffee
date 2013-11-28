@@ -11,10 +11,10 @@ channel.bind 'new', (photo) ->
 	$image = $('.insta_image:last').clone()
 
 	$image.find('.caption').text photo.caption
-	$tags_array = []
-	for tag in photo.tags
-		$tags_array.push('<a href="'+tags[i].href+'">'+tags[i].text+'</a>')
-	$image.find('.tags').html $tags_array.toString
+	# $tags_array = []
+	# for tag in photo.tags
+	# 	$tags_array.push('<a href="'+tags[i].href+'">'+tags[i].text+'</a>')
+	$image.find('.tags').html photo.tags.toString
 	$image.find('.user').text photo.user.email
 	$image.find('img').attr 'src', photo.image_url
 
