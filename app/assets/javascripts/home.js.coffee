@@ -7,3 +7,5 @@ $ ->
     e.preventDefault()
     $('.add_photo_form').slideToggle()
   
+
+  console.log()

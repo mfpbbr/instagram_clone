@@ -1,2 +1,0 @@
-class WebsocketRailsController < ApplicationController
-end

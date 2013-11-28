@@ -1,18 +1,21 @@
-%body
+.photos
   - @photos.each do |photo|
     %section{class:"insta_image"}
       = image_tag photo.image.url(:medium), class: "instagram_image"
       %br
-      = photo.caption
+      %span.caption
+        = photo.caption
       %br
-      - photo.tags.each do |tag|
-        =link_to tag.text,tag
+      %span.tags
+        - photo.tags.each do |tag|
+          =link_to tag.text,tag
       %br
       = render 'like_button', {photo: photo}
       = photo.likes.count
       %br
       Uploaded by:
-      = photo.user.email
+      %span.user
+        = photo.user.email
       %br
       = link_to 'Edit', edit_photo_path(photo)
       %br

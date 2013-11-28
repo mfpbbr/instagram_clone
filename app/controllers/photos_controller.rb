@@ -13,10 +13,10 @@ class PhotosController < ApplicationController
 	def create
 		@photo = current_user.photos.build(photo_params)
 		@photo.tags = params[:photo][:tag_list].split(' ').map do |text|
-  		Tag.find_or_create_by(text: text)
-  	end
+	  		Tag.find_or_create_by(text: text)
+	  	end
 		if @photo.save
-			WebsocketRails[:photos].trigger 'new', {caption: @photo.caption, image_url: @photo.image.url}
+			WebsocketRails[:photos].trigger 'new', {caption: @photo.caption, image_url: @photo.image.url, tags: @photo.tags, user: @photo.user }
 			redirect_to '/photos'
 		else
 			render 'new'
