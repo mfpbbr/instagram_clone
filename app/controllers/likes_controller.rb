@@ -11,4 +11,5 @@ class LikesController < ApplicationController
 		current_user.like(photo).destroy
 		redirect_to('/')
 	end
+	
 end

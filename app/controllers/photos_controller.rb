@@ -16,7 +16,7 @@ class PhotosController < ApplicationController
 	  		Tag.find_or_create_by(text: text)
 	  	end
 		if @photo.save
-			WebsocketRails[:photos].trigger 'new', {caption: @photo.caption, image_url: @photo.image.url, tags: @photo.tags, user: @photo.user }
+			WebsocketRails[:photos].trigger 'new', {caption: @photo.caption, image_url: @photo.image.url(:medium), tags: @photo.tags, user: @photo.user }
 			redirect_to '/photos'
 		else
 			render 'new'
