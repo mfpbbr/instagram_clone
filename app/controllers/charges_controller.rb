@@ -24,6 +24,10 @@ class ChargesController < ApplicationController
     :currency    => 'GBP'
   )
 
+  @charge = charge
+
+  ChargeMailer.new_charge_notification(@charge).deliver
+
   redirect_to photos_path
 
 
