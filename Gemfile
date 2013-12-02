@@ -33,6 +33,7 @@ gem  'twitter-bootstrap-rails',
 							branch: 'bootstrap3'
 gem 'websocket-rails'
 gem 'thin'
+gem 'stripe', :git => 'https://github.com/stripe/stripe-ruby'
 
 group :production do
 	gem 'aws-sdk'
@@ -42,12 +43,12 @@ end
 group :doc do
   gem 'sdoc', require: false
   gem 'capybara'
-	gem 'rspec-rails'
-	gem 'cucumber-rails', :require => false
-	gem 'database_cleaner'
-	gem 'shoulda-matchers'
-	gem 'poltergeist'
-	gem 'simplecov', :require => false, :group => :test
+  gem 'rspec-rails'
+  gem 'cucumber-rails', :require => false
+  gem 'database_cleaner'
+  gem 'shoulda-matchers'
+  gem 'poltergeist'
+  gem 'simplecov', :require => false, :group => :test
   gem 'factory_girl_rails'
   gem 'launchy'
   gem 'shoulda-matchers'

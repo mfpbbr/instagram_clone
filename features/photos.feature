@@ -20,6 +20,7 @@ Feature: Photos
 	  Then I should see "Salami"
 
 	Scenario: Delete photo
+	  Given I have logged in
 	  Given I have uploaded a photo with caption "Awesome" and tags "#selfie #yolo"
 	  When I delete the photo
 	  Then I should not see "Awesome"
@@ -30,11 +31,12 @@ Feature: Photos
 	  Then I should see "james@me.com"
 
 	Scenario: Harshtags
-		Given I have uploaded a photo with caption "Blue Jeans" and tags "#cheap #nasty"
+		Given I have logged in
+		Given I have uploaded a photo with caption "Blue Jeans"and tags "#cheap #nasty"
 		Then I should see "#cheap #nasty"
 
 	Scenario: Likes
-		Given I have uploaded a photo with caption "Awesome"and tags "#selfie #yolo"
+		Given I have uploaded a photo with caption "Blue Jeans"and tags "#cheap #nasty"
 		When I like the photo with caption "Awesome"
 		Then the photo has one like
 

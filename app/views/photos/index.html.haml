@@ -10,12 +10,16 @@
         - photo.tags.each do |tag|
           =link_to tag.text,tag
       %br
-      = render 'like_button', {photo: photo}
+      = if current_user
+        = render 'like_button', {photo: photo}
       = photo.likes.count
       %br
       Uploaded by:
       %span.user
         = photo.user.email
+      %br
+      = link_to 'Buy Print', new_charge_path
+
       %br
       = link_to 'Edit', edit_photo_path(photo)
       %br
