@@ -10,9 +10,9 @@
         - photo.tags.each do |tag|
           =link_to tag.text,tag
       %br
-      = if current_user
+      - if current_user
         = render 'like_button', {photo: photo}
-      = photo.likes.count
+      = "Likes: #{photo.likes.count}"
       %br
       Uploaded by:
       %span.user

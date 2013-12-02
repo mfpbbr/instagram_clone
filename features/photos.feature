@@ -32,11 +32,12 @@ Feature: Photos
 
 	Scenario: Harshtags
 		Given I have logged in
-		Given I have uploaded a photo with caption "Blue Jeans"and tags "#cheap #nasty"
+		Given I have uploaded a photo with caption "Blue Jeans" and tags "#cheap #nasty"
 		Then I should see "#cheap #nasty"
 
 	Scenario: Likes
-		Given I have uploaded a photo with caption "Blue Jeans"and tags "#cheap #nasty"
+		Given I have logged in
+		And I have uploaded a photo with caption "Blue Jeans" and tags "#cheap #nasty"
 		When I like the photo with caption "Awesome"
 		Then the photo has one like
 

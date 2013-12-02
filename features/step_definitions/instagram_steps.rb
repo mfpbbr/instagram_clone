@@ -49,8 +49,8 @@ When(/^I delete the photo$/) do
   click_link 'Delete'
 end
 
-Then(/^I should not see "(.*?)"$/) do |caption|
-	page.should_not have_content caption
+Then(/^I should not see "(.*?)"$/) do |content|
+	page.should_not have_content content
 end
 
 Given(/^I have logged in$/) do
@@ -59,10 +59,12 @@ Given(/^I have logged in$/) do
 end
 
 When(/^I like the photo with caption "(.*?)"$/) do |caption|
+  visit '/'
   click_button 'Like'
 end
 
 Then(/^the photo has one like$/) do
+  save_and_open_page
   page.should have_content "Likes: 1"
 end
 
