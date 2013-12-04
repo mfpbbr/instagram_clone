@@ -14,6 +14,8 @@ channel.bind 'new', (photo) ->
 		tags_array.push('<a href="/tags/'+tag.id+'">'+tag.text+'</a>')
 	$image.find('.tags').html tags_array.toString()
 	$image.find('.user').text photo.user.email
+	$image.find('.like_count').text 'Likes: 0'
+	$image.find('.like_button form').attr('action', '/photos/'+photo.id+'/likes')
 	$image.find('img').attr 'src', photo.image_url
 
 	$('.photos').append $image

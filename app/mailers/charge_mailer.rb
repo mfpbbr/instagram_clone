@@ -6,9 +6,9 @@ class ChargeMailer < ActionMailer::Base
   #
   #   en.charge_mailer.new_charge_notification.subject
   #
-  def new_charge_notification charge
+  def new_charge_notification charge, photo_id
     @charge = charge
-    
+    @photo_id = photo_id
     mail to: "hamchapman@gmail.com", subject: "You've received another payment!"
   end
 end

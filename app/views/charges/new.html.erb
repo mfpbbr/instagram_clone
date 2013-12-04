@@ -4,7 +4,7 @@
       <span>Amount: £5.00</span>
     </label>
   </article>
-
+  <input type="hidden" name='photo_id' value="<%= @photo_id %>" >
   <script src="https://checkout.stripe.com/checkout.js" class="stripe-button"
           data-key="<%= Rails.configuration.stripe[:publishable_key] %>"
           data-description="Photo print"

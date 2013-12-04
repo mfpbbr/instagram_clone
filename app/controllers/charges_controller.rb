@@ -1,7 +1,7 @@
 class ChargesController < ApplicationController
 
   def new
-
+    @photo_id = params[:photo_id]
   end
 
   def index
@@ -23,13 +23,9 @@ class ChargesController < ApplicationController
     :description => 'Rails Stripe customer',
     :currency    => 'GBP'
   )
-
-  @charge = charge
-
-  ChargeMailer.new_charge_notification(@charge).deliver
-
+  photo_id = params[:photo_id]
+  ChargeMailer.new_charge_notification(charge, photo_id).deliver!
   redirect_to photos_path
-
 
   rescue Stripe::CardError => e
   	flash[:error] = e.message

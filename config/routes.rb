@@ -7,7 +7,7 @@ InstagramClone::Application.routes.draw do
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
-  root :to => "photos#index"
+  root :to => "home#index"
 
   resources :photos do 
     resources :likes

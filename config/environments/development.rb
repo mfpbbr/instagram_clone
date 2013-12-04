@@ -9,7 +9,7 @@ InstagramClone::Application.configure do
     :authentication => :plain,
     :address => "smtp.mailgun.org",
     :port => 587,
-    :domain => "Hammychap.mailgun.org",
+    :domain => "hammychap.mailgun.org",
     :user_name => "postmaster@hammychap.mailgun.org",
     :password => "5de2-8i9o6d0"
   }
@@ -24,7 +24,7 @@ InstagramClone::Application.configure do
   config.action_controller.perform_caching = false
 
   # Don't care if the mailer can't send.
-  config.action_mailer.raise_delivery_errors = false
+  config.action_mailer.raise_delivery_errors = true
 
   # Print deprecation notices to the Rails logger.
   config.active_support.deprecation = :log

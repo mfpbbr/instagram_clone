@@ -34,6 +34,7 @@ gem  'twitter-bootstrap-rails',
 gem 'websocket-rails'
 gem 'thin'
 gem 'stripe', :git => 'https://github.com/stripe/stripe-ruby'
+gem 'gibbon'
 
 group :production do
 	gem 'aws-sdk'

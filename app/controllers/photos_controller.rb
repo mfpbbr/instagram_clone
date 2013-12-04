@@ -1,4 +1,4 @@
-class PhotosController < ApplicationController
+ class PhotosController < ApplicationController
 	before_filter :find_photo, only: [:edit, :update, :destroy]
 	before_action :authenticate_user!, except: :index
 
@@ -16,7 +16,7 @@ class PhotosController < ApplicationController
 	  		Tag.find_or_create_by(text: text)
 	  	end
 		if @photo.save
-			WebsocketRails[:photos].trigger 'new', {caption: @photo.caption, image_url: @photo.image.url(:medium), tags: @photo.tags, user: @photo.user }
+			WebsocketRails[:photos].trigger 'new', {caption: @photo.caption, image_url: @photo.image.url(:medium), tags: @photo.tags, user: @photo.user, id: @photo.id }
 			redirect_to '/photos'
 		else
 			render 'new'

@@ -11,14 +11,16 @@
           =link_to tag.text,tag
       %br
       - if current_user
-        = render 'like_button', {photo: photo}
-      = "Likes: #{photo.likes.count}"
+        %span.like_button
+          = render 'like_button', {photo: photo}
+      %span.like_count
+        = "Likes: #{photo.likes.count}"
       %br
       Uploaded by:
       %span.user
         = photo.user.email
       %br
-      = link_to 'Buy Print', new_charge_path
+      = link_to 'Buy Print', new_charge_path(photo_id: photo.id)
 
       %br
       = link_to 'Edit', edit_photo_path(photo)
