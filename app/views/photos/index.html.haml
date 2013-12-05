@@ -20,6 +20,8 @@
       %span.user
         = photo.user.email
       %br
+      %div.map{id: "map_#{photo.id}", data: { id: photo.id }}
+      %br
       = link_to 'Buy Print', new_charge_path(photo_id: photo.id)
 
       %br

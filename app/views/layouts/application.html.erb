@@ -34,7 +34,11 @@
     <!-- Size should be 32 x 32 pixels -->
     <%= favicon_link_tag 'favicon.ico', :rel => 'shortcut icon' %>
 
+     <script type="text/javascript"
+      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDGZMRoXKcCGaDwy9AZ-bX83ga8vHUJ4y0&sensor=false"></script>
+
     <%= javascript_include_tag "application" %>
+    <%= javascript_include_tag("gmaps.js") %>
   </head>
   <body>
     
@@ -93,6 +97,11 @@
           <%= f.label :tag_list %>
           <br/>
           <%= f.text_area :tag_list %>
+        </p>
+        <p class="address">
+          <%= f.label :address %>
+          <br/>
+          <%= f.text_field :address %>
         </p>
         <p class="upload_button">
           <%= f.submit 'Upload' %>

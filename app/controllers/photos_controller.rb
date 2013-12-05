@@ -43,7 +43,7 @@
 
 	private
 		def photo_params
-			params[:photo].permit(:image, :caption)
+			params[:photo].permit(:image, :caption, :address)
 		end
 
 		def find_photo

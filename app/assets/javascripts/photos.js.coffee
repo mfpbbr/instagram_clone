@@ -19,3 +19,23 @@ channel.bind 'new', (photo) ->
 	$image.find('img').attr 'src', photo.image_url
 
 	$('.photos').append $image
+
+
+$(document).ready ->
+	$('.map').each ->
+		$map = $(this)
+		photo_id = $map.data('id')
+		$.get "http://localhost:3000/api/photos/#{photo_id}", (photo) ->
+			map = new GMaps
+			  div: '#' + $map[0].id
+			  lat: photo.latitude
+			  lng: photo.longitude
+			map.addMarker
+			  lat: photo.latitude
+			  lng: photo.longitude
+				
+			  
+             
+             
+ 
+

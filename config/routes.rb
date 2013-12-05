@@ -7,14 +7,21 @@ InstagramClone::Application.routes.draw do
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
-  root :to => "home#index"
+  #for adding a subdomain e.g. api.example.com
+  # constraints subdomain: 'api' do
+    namespace :api, defaults: { format: :json } do
+      resources :photos
+    end
+  # end
 
-  resources :photos do 
-    resources :likes
-  end
+  # constraints subdomain: false do
+    resources :photos do
+      resources :likes
+    end
+  # end
 
   # You can have the root of your site routed with "root"
-  # root 'welcome#index'
+  root 'home#index'
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'

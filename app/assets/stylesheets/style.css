@@ -84,10 +84,10 @@ font-family: OpenSansBold;
 	background-color:#333333;
 	background-image:url(../assets/arrow.png);
 }
-.button:hover{
+/*.button:hover{
 	background-color:#494949;
 	cursor:pointer;
-}
+}*/
 
 /******************************
  SLIDE 1 

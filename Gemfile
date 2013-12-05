@@ -35,13 +35,14 @@ gem 'websocket-rails'
 gem 'thin'
 gem 'stripe', :git => 'https://github.com/stripe/stripe-ruby'
 gem 'gibbon'
+gem 'geocoder'
 
 group :production do
 	gem 'aws-sdk'
 	gem 'rails_12factor'
 end
 
-group :doc do
+group :development, :test do
   gem 'sdoc', require: false
   gem 'capybara'
   gem 'rspec-rails'
